@@ -25,7 +25,6 @@ int	main(void)
 
 	if (!DEFINITIONS_OK || !init_shell(&shell))
 		clean_and_exit_shell(&shell, MALLOC_ERROR, "init shell failed");
-	print_welcome_msg(&shell);
 	while (true)
 	{
 		if (!read_input(&shell.input_line, PROMPT, true, shell.is_interactive))

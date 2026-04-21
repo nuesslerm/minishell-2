@@ -14,12 +14,7 @@
 
 void	print_welcome_msg(t_sh *shell)
 {
-	if (shell->is_interactive)
-	{
-		clear_terminal_soft();
-		ft_printf("%s", WELCOME_ART1);
-		ft_printf("%s", WELCOME_MSG);
-	}
+	(void)shell;
 }
 
 void	clear_terminal_soft(void)

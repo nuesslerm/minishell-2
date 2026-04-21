@@ -53,23 +53,11 @@
 #  define WELCOME_ART2		""
 # endif
 
-# define PROGRAM_NAME		"cminishell"
-# if NO_COLOR
-#  define PRETTY_PROG_NAME	"🌊minishell"
-# else
-#  define PRETTY_PROG_NAME	"\e[3;34m🌊\e[0m\e[1;34mminishell\e[0m"
-# endif
+# define PROGRAM_NAME		"minishell"
+# define PRETTY_PROG_NAME	"minishell"
 
-# if NO_COLOR
-#  define PROMPT			"🌊minishell$ "
-#  define HEREDOC_PROMPT	"> "
-# else
-// '🌊' is a 4-byte character, but only takes up width of 2 characters ->
-// use hexcode of '🌊' to mark 2 bytes as invisible characters
-#  define PROMPT			\
-	"\1\e[3;34m\2\xf0\x9f\1\x8c\x8a\2\1\e[0m\2\1\e[1;34m\2minishell$\1\e[0m\2 "
-#  define HEREDOC_PROMPT	"\e[1;37m> \e[0m"
-# endif
+# define PROMPT			"minishell$ "
+# define HEREDOC_PROMPT	"> "
 
 # define EXIT_MSG			"exit\n"
 
